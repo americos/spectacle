@@ -3,43 +3,46 @@ title: Base Props
 order: 3
 ---
 
-<a name="base-props"></a>
+<a name="Color"></a>
 
-# Base Props
+# Color
 
-Every component in the Tag API that has `(Base)` after it has been extended from a common class that includes the following props:
+| Name | PropType | Description | Example |
+| --- | --- | --- | --- |
+| `color` | PropTypes.string | Set CSS `color` value or `color` theme value | `#abc123` or `primary` |
+| `bg` or `backgroundColor` | PropTypes.string | Set CSS `background-color` value or `color` theme value | `#abc123` or `secondary` |
 
-| Name         | PropType                   | Description                                                                  | Default         |
-| ------------ | -------------------------- | ---------------------------------------------------------------------------- | --------------- |
-| italic       | PropTypes.boolean          | Set `fontStyle` to `italic`                                                  | `false`         |
-| bold         | PropTypes.boolean          | Set `fontWeight` to `bold`                                                   | `false`         |
-| caps         | PropTypes.boolean          | Set `textTransform` to `uppercase`                                           | `false`         |
-| margin       | PropTypes.number or string | Set `margin` value                                                           |                 |
-| padding      | PropTypes.number or string | Set `padding` value                                                          |                 |
-| textColor    | PropTypes.string           | Set `color` value                                                            |                 |
-| textFont     | PropTypes.string           | Set `fontFamily` value                                                       |                 |
-| textSize     | PropTypes.string           | Set `fontSize` value                                                         |                 |
-| textAlign    | PropTypes.string           | Set `textAlign` value                                                        |                 |
-| bgColor      | PropTypes.string           | Set `backgroundColor` value                                                  |                 |
-| bgGradient   | PropTypes.string           | Set `backgroundImage` value                                                  |                 |
-| bgImage      | PropTypes.string           | Set `backgroundImage` value                                                  |                 |
-| bgImageStyle | PropTypes.string           | Set backgroundImage css property value directly                              |                 |
-| bgSize       | PropTypes.string           | Set `backgroundSize` value                                                   | `cover`         |
-| bgPosition   | PropTypes.string           | Set `backgroundPosition` value                                               | `center center` |
-| bgRepeat     | PropTypes.string           | Set `backgroundRepeat` value                                                 |                 |
-| bgDarken     | PropTypes.number           | Float value from 0.0 to 1.0 specifying how much to darken the bgImage image  | 0               |
-| bgLighten    | PropTypes.number           | Float value from 0.0 to 1.0 specifying how much to lighten the bgImage image | 0               |
-| overflow     | PropTypes.string           | Set `overflow` value                                                         |                 |
-| height       | PropTypes.string           | Set `height` value                                                           |                 |
+<a name="Space"></a>
 
-_NOTE: When using `bgImage` prop for local images, you must import the file for it to render properly._
+# Space
 
-```jsx
-import myImage from './images/my-image.jpg';
+| Name | PropType | Description | Example |
+| --- | --- | --- | --- |
+| `m` or `margin` | PropTypes.string | Set CSS `margin` value or `space` theme value | `24px`, `6px 3px 2px`, or `primary` |
+| `mt` or `marginTop` | PropTypes.string | Set CSS `margin-top` value or `space` theme value | `1em` or `tertiary` |
+| `mr` or `marginRight` | PropTypes.string | Set CSS `margin-right` value or `space` theme value | `0.5em` or `secondary` |
+| `mb` or `marginBottom` | PropTypes.string | Set CSS `margin-bottom` value or `space` theme value | `2px` or `primary` |
+| `ml` or `marginLeft` | PropTypes.string | Set CSS `margin-left` value or `space` theme value | `3%` or `secondary` |
+| `mx` or `marginX` | PropTypes.string | Set CSS `margin-left` and `margin-right` value or `space` theme value | `1em` or `secondary` |
+| `my` or `marginY` | PropTypes.string | Set CSS `margin-top` and `margin-bottom` value or `space` theme value | `5px` or `tertiary` |
+| `p` or `padding` | PropTypes.string | Set CSS `padding` value or `space` theme value | `24px`, `6px 3px 2px`, or `primary` |
+| `pt` or `paddingTop` | PropTypes.string | Set CSS `padding-top` value or `space` theme value | `1em` or `tertiary` |
+| `pr` or `paddingRight` | PropTypes.string | Set CSS `padding-right` value or `space` theme value | `0.5em` or `secondary` |
+| `pb` or `paddingBottom` | PropTypes.string | Set CSS `padding-bottom` value or `space` theme value | `2px` or `primary` |
+| `pl` or `paddingLeft` | PropTypes.string | Set CSS `padding-left` value or `space` theme value | `3%` or `secondary` |
+| `px` or `paddingX` | PropTypes.string | Set CSS `padding-left` and `padding-right` value or `space` theme value | `1em` or `secondary` |
+| `py` or `paddingY` | PropTypes.string | Set CSS `padding-top` and `padding-bottom` value or `space` theme value | `5px` or `tertiary` |
 
-......
+<a name="Typography"></a>
 
-<Slide bgImage={myImage}>
-  I have an image for a background
-</Slide>
-```
+# Typography
+
+| Name | PropType | Description | Example |
+| --- | --- | --- | --- |
+| `fontFamily` | PropTypes.string | Set CSS `font-family` value or `fonts` theme value | `Helvetica` or `primary` |
+| `fontSize` | PropTypes.string | Set CSS `font-size` value or `fontSizes` theme value | `16px` or `bodyCopy` |
+| `fontWeight` | PropTypes.string | Set CSS `font-weight` value or `fontWeights` theme value | `400`, `bold`, or `heading` |
+| `lineHeight` | PropTypes.string | Set CSS `line-height` value or `fontWeights` theme value | `1.5em` or `paragraph` |
+| `letterSpacing` | PropTypes.string | Set CSS `letter-spacing` value or `letterSpacings` theme value | `1px` or `spreadOutText` |
+| `textAlign` | PropTypes.string | Set CSS `text-align` value | `left` |
+| `fontStyle` | PropTypes.string | Set CSS `font-style` value | `normal` or `italic` |
